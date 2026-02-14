@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #fff5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255,240,245,0.9);
+  padding: 40px;
+  border-radius: 25px;
+  text-align: center;
+  width: min(90vw, 400px);
+  box-shadow: 0 0 40px rgba(255,105,135,0.4);
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+h1 {
+  color: #ff4d6d;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 12px;
+}
+
+#cake {
+  font-size: 90px;
+  margin: 25px 0;
+  position: relative;
+}
+
+.candles {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.flame {
+  width: 12px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 2px solid #ff8fab;
+  background: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff8fab;
+  color: white;
+}
+
+#message {
+  margin-top: 25px;
+  display: none;
+  color: #ff4d6d;
+  font-size: 12px;
+}
+
+/* FLOATING HEARTS */
+
+.hearts span {
+  position: absolute;
+  bottom: -30px;
+  font-size: 20px;
+  animation: float 10s linear infinite;
+  opacity: 0.7;
+}
+
+.hearts span:nth-child(1) { left: 10%; animation-duration: 8s; }
+.hearts span:nth-child(2) { left: 25%; animation-duration: 11s; }
+.hearts span:nth-child(3) { left: 40%; animation-duration: 9s; }
+.hearts span:nth-child(4) { left: 55%; animation-duration: 12s; }
+.hearts span:nth-child(5) { left: 70%; animation-duration: 10s; }
+.hearts span:nth-child(6) { left: 85%; animation-duration: 13s; }
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-110vh);
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine 💖</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- INTRO CARD -->
+        <div id="intro">
+            <h2>Hi Love 💖</h2>
+            <p>I made something special just for you.</p>
+            <p>Take a deep breath...</p>
+            <p>And open your heart 💗</p>
+            <button onclick="startLetter()">Open 💌</button>
+        </div>
+
+        <!-- LETTER CARD -->
+        <div id="letter">
+            <div id="letterText"></div>
+
+            <!-- QUESTION -->
+            <div id="question">
+                <h3>Will you be my Valentine? 💖</h3>
+
+                <div class="buttons">
+                    <button class="yesBtn" onclick="yes()">YES</button>
+                    <button id="noBtn">NO</button>
+                </div>
+            </div>
+
+            <!-- YES MESSAGE -->
+            <div id="yesMsg"> 💕 I LOVE YOU!</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
